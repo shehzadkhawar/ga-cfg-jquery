@@ -93,7 +93,12 @@ $(document).ready(function(){
     });
     
     $("#animate").click(function(){
-        $("#panelAnimate").fadeOut("slow"));
+        $("#panelAnimate").animate({
+            left: '250px',
+            opacity: '0.5',
+            height: '150px',
+            width: '150px'
+        });
     });
 });
 </script>
