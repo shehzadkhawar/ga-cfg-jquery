@@ -10,7 +10,7 @@
     border: solid 1px #c3c3c3;
 }
 
-#panel {
+#panel, #panelFade {
     padding: 50px;
     display: none;
 }
@@ -44,7 +44,7 @@
  <div id="fade">
     <h2>Embedding jQuery into your pages (Click to Fade in)</h2>
   </div>
-  <div id="panel">
+  <div id="panelFade">
     <p>Use the following snippet into your "&lt;head&gt;" tag</p>
     <span>
       <code>&lt;script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"&gt;&lt;/script&gt;</code>
@@ -72,7 +72,7 @@ $(document).ready(function(){
     });
     
     $("#fade").click(function(){
-        $("#panel").fadeIn("slow");
+        $("#panelFade").fadeIn("slow");
     });
 });
 </script>
