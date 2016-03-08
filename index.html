@@ -3,7 +3,7 @@
 <title>Simple jQuery Tutorial for St Andrews CFG</title>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <style> 
-#panel, #flip {
+#panel, #flip, #fade {
     padding: 5px;
     text-align: center;
     background-color: #e5eecc;
@@ -41,6 +41,17 @@
     </span>
  </div>
  
+ <div id="fade">
+    <h2>Embedding jQuery into your pages (Click to Fade in)</h2>
+  </div>
+  <div id="panel">
+    <p>Use the following snippet into your "&lt;head&gt;" tag</p>
+    <span>
+      <code>&lt;script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"&gt;&lt;/script&gt;</code>
+      
+    </span>
+ </div>
+ 
 </body>
 
 <script>
@@ -58,6 +69,10 @@
 $(document).ready(function(){
     $("#flip").click(function(){
         $("#panel").slideDown("slow");
+    });
+    
+    $("#fade").click(function(){
+        $("#panel").fadeIn("slow");
     });
 });
 </script>
