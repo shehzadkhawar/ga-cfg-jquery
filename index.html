@@ -3,14 +3,14 @@
 <title>Simple jQuery Tutorial for St Andrews CFG</title>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <style> 
-#panel, #flip, #fade {
+#panel, #flip, #fade, #animate {
     padding: 5px;
     text-align: center;
     background-color: #e5eecc;
     border: solid 1px #c3c3c3;
 }
 
-#panel, #panelFade {
+#panel, #panelFade, #panelAnimate {
     padding: 50px;
     display: none;
     background-color: #e5eecc;
@@ -53,6 +53,17 @@
     </span>
  </div>
  
+ <div id="animate">
+    <h2>Embedding jQuery into your pages (Click to Fade in)</h2>
+  </div>
+  <div id="panelAnimate">
+    <p>Use the following snippet into your "&lt;head&gt;" tag</p>
+    <span>
+      <code>&lt;script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"&gt;&lt;/script&gt;</code>
+      
+    </span>
+ </div>
+ 
 </body>
 
 <script>
@@ -74,6 +85,10 @@ $(document).ready(function(){
     
     $("#fade").click(function(){
         $("#panelFade").fadeIn("slow");
+    });
+    
+    $("#animate").click(function(){
+        $("#panelAnimate").animate({left: '250px'});
     });
 });
 </script>
